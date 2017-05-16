@@ -28,13 +28,9 @@ class SearchCompany:
         soup = BeautifulSoup(result, "lxml")
         items = soup.findAll("corporation")
 
-        print(items)
-
         url_list = {}
         i = 0
         for item in items:
-
-            print(item)
 
             #法人種別判定
             if item.find("kind") == None:
